@@ -67,6 +67,7 @@ fun Name(modifier: Modifier = Modifier){
             fontSize = 30.sp,
             fontWeight = FontWeight.W300,
             fontFamily = FontFamily.SansSerif,
+            color = Color.Black,
             modifier = Modifier.padding(10.dp))
         Text(text = "Android-developer-to-be",
             textAlign = TextAlign.Center,
@@ -82,69 +83,67 @@ fun Handles(modifier: Modifier){
         Row (modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
             ){
-            Spacer(modifier = Modifier.weight(0.35f))
+            Spacer(modifier = Modifier.weight(0.45f))
             Icon(imageVector = Icons.Default.Email,
                 contentDescription = "email",
                 tint = Color(0xff006c3a),
-                modifier = Modifier.weight(0.25f)
+                modifier = Modifier
+                    .height(15.dp)
+                    .width(36.dp)
             )
             Text(text = "bassel.tharwat01@gmail.com",
-                textAlign = TextAlign.Left,
+                textAlign = TextAlign.Right,
                 fontWeight = FontWeight.Normal,
-                fontSize = 18.sp,
-                modifier = Modifier
-                    .weight(2f)
-                    .padding(start = 20.dp)
-                   )
+                fontSize = 14.sp,
+                color = Color.Black,
+                modifier = Modifier)
+            Spacer(modifier = Modifier.weight(0.45f))
 
         }
         Row (modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ){
-            Spacer(modifier = Modifier.weight(0.35f))
+            Spacer(modifier = Modifier.weight(0.45f))
             Icon(imageVector = Icons.Default.Phone,
                 contentDescription = "number",
                 tint = Color(0xff006c3a),
-                modifier = Modifier.weight(0.25f)
+                modifier = Modifier
+                    .height(15.dp)
+                    .width(36.dp)
             )
             Text(text = "+02 01111211665",
-                textAlign = TextAlign.Left,
+                textAlign = TextAlign.Right,
                 fontWeight = FontWeight.Normal,
-                fontSize = 18.sp,
+                fontSize = 14.sp,
+                color = Color.Black,
                 modifier = Modifier
-                    .weight(2f)
-                    .padding(start = 20.dp)
             )
+            Spacer(modifier = Modifier.weight(0.45f))
 
         }
         Row (modifier = Modifier.fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
         ){
             val image = painterResource(id = R.drawable.work_24dp_000000)
-            Spacer(modifier = Modifier.weight(0.35f))
+            Spacer(modifier = Modifier.weight(0.45f))
             Image(painter = image,
                 contentDescription = null,
                 colorFilter = ColorFilter.tint(Color(0xff006c3a)),
                 modifier = Modifier
-                    .height(25.dp)
+                    .height(15.dp)
                     .width(36.dp)
-                    .weight(0.25f)
             )
             Text(text = "github.com/BasselTharwat",
                 textAlign = TextAlign.Left,
                 fontWeight = FontWeight.Normal,
-                fontSize = 18.sp,
+                fontSize = 14.sp,
+                color = Color.Black,
                 modifier = Modifier
-                    .weight(2f)
-                    .padding(start = 20.dp)
             )
-
+            Spacer(modifier = Modifier.weight(0.45f))
         }
-
-
     }
-
-
 }
 
 @Composable
@@ -167,7 +166,7 @@ fun MyCard(modifier: Modifier = Modifier){
 }
 
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, widthDp = 320)
 @Composable
 fun ThisIsMernPreview() {
     ThisIsMernTheme {
